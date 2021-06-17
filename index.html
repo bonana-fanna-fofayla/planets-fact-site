@@ -3,61 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" defer>
   
   <title>Frontend Mentor | Planets fact site</title>
 </head>
 <body>
-  Mercury
-
-  <!-- Overview Content Start -->
-
-  Mercury is the smallest planet in the Solar System and the closest 
-  to the Sun. Its orbit around the Sun takes 87.97 Earth days, the 
-  shortest of all the Sun's planets. Mercury is one of four terrestrial 
-  planets in the Solar System, and is a rocky body like Earth.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) -->
-
-  <!-- Overview Content End -->
-
-  <!-- Internal Structure Content Start -->
-
-  Mercury appears to have a solid silicate crust and mantle overlying a 
-  solid, iron sulfide outer core layer, a deeper liquid core layer, and 
-  a solid inner core. The planet's density is the second highest in the 
-  Solar System at 5.427 g/cm3 , only slightly less than Earth's density.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  Mercury's surface is similar in appearance to that of the Moon, showing 
-  extensive mare-like plains and heavy cratering, indicating that it has 
-  been geologically inactive for billions of years. It is more heterogeneous 
-  than either Mars's or the Moon’s.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  58.6 Days
-
-  Revolution Time
-  87.97 Days
-
-  Radius
-  2,439.7 KM
-
-  Average Temp.
-  430°c
+ <header>
+     <span class="header__title">The planets</span>
+    <nav>
+      <ul class="nav__list">
+        <li class="nav__list-item"><a href="index.html" title="">Mercury</a></li>
+        <li class="nav__list-item"><a href="venus.html" title="">Venus</a></li>
+        <li class="nav__list-item"><a href="earth.html" title="">Earth</a></li>
+        <li class="nav__list-item"><a href="mars.html" title="">Mars</a></li>
+        <li class="nav__list-item"><a href="jupiter.html" title="">Jupiter</a></li>
+        <li class="nav__list-item"><a href="saturn.html" title="">Saturn</a></li>
+        <li class="nav__list-item"><a href="uranus.html" title="">Uranus</a></li>
+        <li class="nav__list-item"><a href="neptune.html" title="">Neptune</a></li>
+      </ul>
+    </nav>
+ </header>
+ <main id="main-content" data-planet="0">
+   <!-- Image to change depending on tab panel -->
+   <img src="/assets/planet-mercury.svg" alt="Friendly illustration-style vector of the planet Mercury">
+   <!-- Tab buttons -->
+   <section class="tabs" aria-multiselectable="false">
+     <ol class="tabs__navlist" role="tablist">
+       <li class="tabs__nav-item" role="presentation">
+         <button id="overview-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="structure" aria-selected="true">
+            01 Overview
+         </button>
+        </li>
+       <li class="tabs__nav-item" role="presentation">
+         <button id="structure-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="2" aria-selected="false">
+           02 Internal Structure
+          </button>
+        </li>
+       <li class="tabs__nav-item" role="presentation">
+         <button id="geology-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="3" aria-selected="false">
+           03 Surface Geology
+          </button>
+        </li>
+     </ol>
+     <h1>Mercury</h1>
+     <!-- Tab panels -->
+     <div class="tabs__panels">        
+        <div class="tabs__panel" id="overview-tabpanel" role="tabpanel" aria-labelledby="overview-tab">
+          <!-- Overview Content Start -->
+          <p> Mercury is the smallest planet in the Solar System and the closest
+            to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
+            shortest of all the Sun's planets. Mercury is one of four terrestrial
+            planets in the Solar System, and is a rocky body like Earth.</p>
+          <p>Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) --></p>
+          <!-- Overview Content End -->
+        </div>
+        <div class="tabs__panel" id="structure-tabpanel" role="tabpanel" aria-labelledby="structure-tab" hidden>
+          <p>
+            <!-- Internal Structure Content Start -->
+            Mercury appears to have a solid silicate crust and mantle overlying a
+            solid, iron sulfide outer core layer, a deeper liquid core layer, and
+            a solid inner core. The planet's density is the second highest in the
+            Solar System at 5.427 g/cm3 , only slightly less than Earth's density.
+          </p>
+          <p>
+            Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure -->
+            <!-- Internal Structure Content End -->
+          </p>
+        </div>
+        <div class="tabs__panel" id="geology-tabpanel" role="tabpanel" aria-labelledby="geology-tab" hidden>
+          <p>
+            <!-- Surface Geology Content Start -->
+            Mercury's surface is similar in appearance to that of the Moon, showing
+            extensive mare-like plains and heavy cratering, indicating that it has
+            been geologically inactive for billions of years. It is more heterogeneous
+            than either Mars's or the Moon’s.
+          </p>
+          <p>
+            Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology -->
+          </p>
+          <!-- Surface Geology Content End -->
+        </div>
+      </div>
+   </section>
+    <section class="suppInfo">
+      <div class="suppInfo__item">
+        <h4 class="suppInfo__title">Rotation Time</h4>
+        <span class="suppInfo__copy">58.6 Days</span>
+      </div>
+      <div class="suppInfo__item">
+        <h4 class="suppInfo__title">Revolution Time</h4>
+        <span class="suppInfo__copy">87.97 Days</span>
+      </div>
+      <div class="suppInfo__item">
+        <h4 class="suppInfo__title">Radius</h4>
+        <span class="suppInfo__copy">2,439.7 KM</span>
+      </div>
+      <div class="suppInfo__item">
+        <h4 class="suppInfo__title">Average Temp.</h4>
+        <span class="suppInfo__copy">430°c</span>
+      </div>
+    </section>   
+  </main>
+ <footer>
+   <p>Code by Ayla</p>
+ </footer>
+<script src="script.js"></script>
 </body>
 </html>
