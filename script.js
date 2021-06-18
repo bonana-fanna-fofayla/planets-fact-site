@@ -27,6 +27,7 @@ fetch('data.json')
 
 
 // Listen for click on tab buttons and show appropriate tabpanel.
+// h2 is now e.target of tab, add closest so it goes back to the button for the tabs.
 function handleTabSelect (e) {
     // console.log(e);
     tabpanels.forEach(tabpanel => {

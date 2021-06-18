@@ -6,21 +6,50 @@
     --mercury: hsl(194, 48%, 49%);
     --venus: hsl(33, 82%, 61%);
     --earth: hsl(263, 67%, 51%);
-    --mars: hsl(10, 63%, 51%);
+    --mars: hsl(10, 63%, 51%); 
     --jupiter: hsl(2, 68%, 53%);
     --saturn: hsl(17, 73%, 46%);
     --uranus: hsl(169, 73%, 44%);
     --neptune: hsl(222, 87%, 56%);
-    font-size: 100%;
+    font-size: 1rem;
     box-sizing: border-box;
 }
 
 body {
+    background: var(--black) url("assets/background-stars.svg");
+    color: var(--white);
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
+    max-width: 87vw;
+    margin: 0 auto;    
+    font: normal 400 .875rem/1.56rem 'Spartan', sans-serif;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
+}
+
+h1 {
+    font: 500 5rem/6.44rem 'Antonio', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font: 700 .75rem/1.56rem 'Spartan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.6;
+}
+
+h3 {
+    font: 700 .68rem/1.56rem 'Spartan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1;
+}
+
+.header__title,
+.suppInfo__copy {
+    font:  500 2.5rem/3.25rem 'Antonio', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1.5;
 }

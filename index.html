@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" defer>
   
   <title>Frontend Mentor | Planets fact site</title>
@@ -27,26 +29,27 @@
  <main id="main-content" data-planet="0">
    <!-- Image to change depending on tab panel -->
    <img src="/assets/planet-mercury.svg" alt="Friendly illustration-style vector of the planet Mercury">
-   <!-- Tab buttons -->
+   
    <section class="tabs" aria-multiselectable="false">
-     <ol class="tabs__navlist" role="tablist">
+      <h1>Mercury</h1>
+      <!--- Tab buttons --->
+      <ol class="tabs__navlist" role="tablist">
        <li class="tabs__nav-item" role="presentation">
          <button id="overview-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="structure" aria-selected="true">
-            01 Overview
+           <h2>01 Overview</h2>
          </button>
         </li>
        <li class="tabs__nav-item" role="presentation">
          <button id="structure-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="2" aria-selected="false">
-           02 Internal Structure
+           <h2>02 Internal Structure</h2>
           </button>
         </li>
        <li class="tabs__nav-item" role="presentation">
          <button id="geology-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="3" aria-selected="false">
-           03 Surface Geology
+           <h2>03 Surface Geology</h2>
           </button>
         </li>
-     </ol>
-     <h1>Mercury</h1>
+     </ol>     
      <!-- Tab panels -->
      <div class="tabs__panels">        
         <div class="tabs__panel" id="overview-tabpanel" role="tabpanel" aria-labelledby="overview-tab">
@@ -88,19 +91,19 @@
    </section>
     <section class="suppInfo">
       <div class="suppInfo__item">
-        <h4 class="suppInfo__title">Rotation Time</h4>
+        <h3 class="suppInfo__title">Rotation Time</h3>
         <span class="suppInfo__copy">58.6 Days</span>
       </div>
       <div class="suppInfo__item">
-        <h4 class="suppInfo__title">Revolution Time</h4>
+        <h3 class="suppInfo__title">Revolution Time</h3>
         <span class="suppInfo__copy">87.97 Days</span>
       </div>
       <div class="suppInfo__item">
-        <h4 class="suppInfo__title">Radius</h4>
+        <h3 class="suppInfo__title">Radius</h3>
         <span class="suppInfo__copy">2,439.7 KM</span>
       </div>
       <div class="suppInfo__item">
-        <h4 class="suppInfo__title">Average Temp.</h4>
+        <h3 class="suppInfo__title">Average Temp.</h3>
         <span class="suppInfo__copy">430°c</span>
       </div>
     </section>   
