@@ -1,0 +1,180 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(240, 67%, 8%);
+    --grey-dark: hsl(240, 17%, 26%);
+    --grey-light: hsl(240, 6%, 54%);
+    --mercury: hsl(194, 48%, 49%);
+    --venus: hsl(33, 82%, 61%);
+    --earth: hsl(263, 67%, 51%);
+    --mars: hsl(10, 63%, 51%); 
+    --jupiter: hsl(2, 68%, 53%);
+    --saturn: hsl(17, 73%, 46%);
+    --uranus: hsl(169, 73%, 44%);
+    --neptune: hsl(222, 87%, 56%);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--black) url("assets/background-stars.svg");
+    color: var(--white);
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    font: normal 400 .875rem/1.56rem 'Spartan', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* remove if I end up getting normalize.css */
+button {
+    /* removes default styling on buttons */
+    background: transparent;    
+    border: 0 transparent;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font: 500 5rem/6.44rem 'Antonio', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font: 700 .75rem/1.56rem 'Spartan', sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2.6;
+}
+
+h3 {
+    font: 700 .68rem/1.56rem 'Spartan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.header__title {
+    font:  500 1.75rem/2.25rem 'Antonio', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1.05;
+} 
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: .5rem 0;    
+    max-width: 87vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* .nav__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+} */
+
+.nav__list-item {
+    text-transform: uppercase;
+}
+
+.tabs__navlist {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(5rem, 1fr));
+    padding: 0;
+    list-style: none;
+    border: 1px solid var(--grey-dark);
+    border-style: solid none;
+}
+
+.tabs__nav-trigger {
+    border-bottom: .25rem solid var(--mercury);;
+}
+
+.tabs__item-num {
+    display: none;
+}
+
+.tabs__source {
+    color: var(--grey-light);
+}
+
+.tabs__source a {
+    color: var(--grey-light);
+    font-weight: 700;    
+}
+
+.tabs__source a:active,
+.tabs__source a:hover,
+.tabs__source a:focus {
+    color: var(--mercury);
+}
+
+/* .tabs__source a:visited {
+    color: var(--grey-dark); 
+} */
+
+.suppInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: .5rem 0;
+}
+
+.suppInfo__item {    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: space-around;
+    grid-gap: 1rem 1.375rem; */
+    border: 1px solid var(--grey-dark);
+    padding: .75rem 1.375rem;
+}
+
+.suppInfo__title {
+    place-self: center start;
+    font: 700 .5rem/1rem 'Spartan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .73;
+    color: var(--white);
+    opacity: .5;    
+}
+
+.suppInfo__copy {
+    place-self: center end;
+    font:  500 1.25rem/1.625rem 'Antonio', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -.75;
+    /* font-size: 1.25rem; */
+    
+}
+
+/* Desktop specific
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header__title,
+.suppInfo__copy {
+    font:  500 2.5rem/3.25rem 'Antonio', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1.5;
+} 
+
+h3 {
+    font: 700 .68rem/1.56rem 'Spartan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1;
+}
+
+*/

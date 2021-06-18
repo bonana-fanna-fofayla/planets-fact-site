@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap" rel="stylesheet">  
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" defer>
   
   <title>Frontend Mentor | Planets fact site</title>
@@ -36,17 +36,23 @@
       <ol class="tabs__navlist" role="tablist">
        <li class="tabs__nav-item" role="presentation">
          <button id="overview-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="structure" aria-selected="true">
-           <h2>01 Overview</h2>
+           <h2>
+             <span class="tabs__item-num">01</span> Overview
+           </h2>
          </button>
         </li>
        <li class="tabs__nav-item" role="presentation">
          <button id="structure-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="2" aria-selected="false">
-           <h2>02 Internal Structure</h2>
+           <h2>
+             <span class="tabs__item-num">02</span> Internal Structure
+           </h2>
           </button>
         </li>
        <li class="tabs__nav-item" role="presentation">
          <button id="geology-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="3" aria-selected="false">
-           <h2>03 Surface Geology</h2>
+           <h2>
+             <span class="tabs__item-num">03</span> Surface Geology
+            </h2>
           </button>
         </li>
      </ol>     
@@ -54,11 +60,15 @@
      <div class="tabs__panels">        
         <div class="tabs__panel" id="overview-tabpanel" role="tabpanel" aria-labelledby="overview-tab">
           <!-- Overview Content Start -->
-          <p> Mercury is the smallest planet in the Solar System and the closest
+          <p> 
+            Mercury is the smallest planet in the Solar System and the closest
             to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
             shortest of all the Sun's planets. Mercury is one of four terrestrial
-            planets in the Solar System, and is a rocky body like Earth.</p>
-          <p>Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) --></p>
+            planets in the Solar System, and is a rocky body like Earth.
+          </p>
+          <p>
+            <span class="tabs__source">Source : <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" title="Learn more about Mercury on Wikipedia.">Wikipedia</a> <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) --></span>
+          </p>
           <!-- Overview Content End -->
         </div>
         <div class="tabs__panel" id="structure-tabpanel" role="tabpanel" aria-labelledby="structure-tab" hidden>
