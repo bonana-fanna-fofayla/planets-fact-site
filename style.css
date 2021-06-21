@@ -21,7 +21,7 @@ body {
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
-    font: normal 400 .875rem/1.56rem 'Spartan', sans-serif;
+    font: normal 400 .6875rem/1.375rem 'Spartan', sans-serif;
 }
 
 *, *::before, *::after {
@@ -38,21 +38,21 @@ button {
 }
 
 h1 {
-    font: 500 5rem/6.44rem 'Antonio', sans-serif;
+    font: 500 2.5rem/3.25rem 'Antonio', sans-serif;
     text-transform: uppercase;
 }
 
-h2 {
+/* h2 {
     font: 700 .75rem/1.56rem 'Spartan', sans-serif;
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 2.6;
-}
+} */
 
 h3 {
     font: 700 .68rem/1.56rem 'Spartan', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1;
+    letter-spacing: 0.0625rem;
 }
 
 header {
@@ -65,7 +65,7 @@ header {
 .header__title {
     font:  500 1.75rem/2.25rem 'Antonio', sans-serif;
     text-transform: uppercase;
-    letter-spacing: -1.05;
+    letter-spacing: -.065625rem;
 } 
 
 main {
@@ -74,6 +74,7 @@ main {
     grid-template-rows: auto;
     grid-gap: .5rem 0;    
     max-width: 87vw;
+    /* padding: 0 1.5rem; */
     margin: 0 auto;
     text-align: center;
 }
@@ -90,14 +91,38 @@ main {
 .tabs__navlist {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(5rem, 1fr));
-    padding: 0;
+    place-content: center;
+    padding-left: 0;
     list-style: none;
     border: 1px solid var(--grey-dark);
     border-style: solid none;
 }
 
+.tabs__nav-item {
+    border-bottom: .25rem solid transparent;    
+}
+
+.tabs__nav-item:hover,
+.tabs__nav-item:focus {
+    border-bottom: solid var(--grey-dark);
+    /* rewrite as JS later */
+}
+
+.tabs__nav-item[aria-selected="true"] {
+    border-bottom: solid var(--mercury);
+    /* rewrite as JS later */
+    /* Write JS to update the variable color according to planet id */
+}
+
 .tabs__nav-trigger {
-    border-bottom: .25rem solid var(--mercury);;
+    padding: 1rem 0;
+}
+
+.tabs__nav-trigger h2 {
+    font: 700 .5625rem/.625rem 'Spartan', sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: .120625rem;
 }
 
 .tabs__item-num {

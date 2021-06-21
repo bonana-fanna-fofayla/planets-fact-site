@@ -1,13 +1,11 @@
 // Declare global variables
 const main = document.querySelector(`main`);
-const {planet} = main.dataset; 
+const {planet} = main.dataset;  
 
 // Declare Variables for tablist, tabs, and tabpanels
 const tablist = main.querySelector(`.tabs`);
 const tabs = tablist.querySelectorAll(`[role='tab']`);
 const tabpanels = Array.from(tablist.querySelectorAll(`[role='tabpanel']`));
-
-console.log(planet);
 
 // Retrieve and parse json contents back into a Javascript array of objects.
 fetch('data.json')
@@ -18,12 +16,21 @@ fetch('data.json')
       return response.json();
     })
   .then(data => {
-      const planetObj = data;
-    //   console.log(planetObj);
+      const planetArray = data;
+    //   console.log(planetArray[0]);
+      returnPlanetIndex(planet, planetArray);
      })
   .catch((error) => {
     console.error('Error:', error);
-});
+})
+
+//   console.log(planetArray);
+
+function returnPlanetIndex(planet, planetArray) {
+    const planetIndex = planetArray.findIndex(item => item.name === planet);    
+    console.log(planetIndex);
+    return planetIndex;
+}
 
 
 // Listen for click on tab buttons and show appropriate tabpanel.
@@ -36,8 +43,9 @@ function handleTabSelect (e) {
     tabs.forEach(tab => {
         tab.setAttribute(`aria-selected`, false);
     });
-    e.target.setAttribute(`aria-selected`, true);
-    const {id} = e.target;
+    let tabTarget = e.target.closest(`[role='tab']`);
+    tabTarget.setAttribute(`aria-selected`, true);
+    const {id} = tabTarget;
     const tabPanel = tabpanels.find(
         tabpanel => tabpanel.getAttribute(`aria-labelledby`) === id
         );
