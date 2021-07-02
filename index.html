@@ -5,30 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap" rel="stylesheet">  
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" defer>
+  <link defer rel="stylesheet" type="text/css" href="style.css">  
+  <script defer src="script.js"></script>
+  <link defer rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" >
   
   <title>Frontend Mentor | Planets fact site</title>
 </head>
 <body>
  <header>
      <span class="header__title">The planets</span>
+     <img src="assets/icon-hamburger.svg" alt="collasped mobile menu">
     <nav>
+      
       <ul class="nav__list">
-        <li class="nav__list-item"><a href="index.html" title="">Mercury</a></li>
-        <li class="nav__list-item"><a href="venus.html" title="">Venus</a></li>
-        <li class="nav__list-item"><a href="earth.html" title="">Earth</a></li>
-        <li class="nav__list-item"><a href="mars.html" title="">Mars</a></li>
-        <li class="nav__list-item"><a href="jupiter.html" title="">Jupiter</a></li>
-        <li class="nav__list-item"><a href="saturn.html" title="">Saturn</a></li>
-        <li class="nav__list-item"><a href="uranus.html" title="">Uranus</a></li>
-        <li class="nav__list-item"><a href="neptune.html" title="">Neptune</a></li>
+        <li class="nav__list-item">
+          <span class="nav__item-planet"></span>
+          <a class="nav__item-link" href="index.html" title="">Mercury</a>
+          <img src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="nav__list-item">
+          <span class="nav__item-planet"></span>
+          <a class="nav__item-link" href="venus.html" title="">Venus</a>
+          <img src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="nav__list-item">
+          <span class="nav__item-planet"></span>
+          <a class="nav__item-link" href="earth.html" title="">Earth</a>
+          <img src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="nav__list-item">
+          <span class="nav__item-planet"></span>
+          <a class="nav__item-link" href="mars.html" title="">Mars</a>
+          <img src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="nav__list-item">
+          <span class="nav__item-planet"></span>
+          <a class="nav__item-link" href="jupiter.html" title="">Jupiter</a>
+          <img src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="nav__list-item">
+          <span class="nav__item-planet"></span>
+          <a class="nav__item-link" href="saturn.html" title="">Saturn</a>
+          <img src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="nav__list-item">
+          <span class="nav__item-planet"></span>
+          <a class="nav__item-link" href="uranus.html" title="">Uranus</a>
+          <img src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="nav__list-item">
+          <span class="nav__item-planet"></span>
+          <a class="nav__item-link" href="neptune.html" title="">Neptune</a>
+          <img src="assets/icon-chevron.svg" alt="">
+        </li>
       </ul>
     </nav>
  </header>
- <main id="main-content" data-planet="Mercury">
-   <!-- Image to change depending on tab panel -->
-   <img src="/assets/planet-mercury.svg" alt="Friendly illustration-style vector of the planet Mercury">
+ <main id="main-content" data-planet="0">
+   <!--- Image to change depending on tab panel --->
+   <img src="assets/planet-mercury.svg" alt="Friendly illustration-style vector of the planet Mercury">
    
    <section class="tabs" aria-multiselectable="false">
       <h1>Mercury</h1>
@@ -121,6 +156,5 @@
  <footer>
    <p>Code by Ayla</p>
  </footer>
-<script src="script.js"></script>
 </body>
 </html>
