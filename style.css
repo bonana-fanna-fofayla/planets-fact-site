@@ -28,19 +28,6 @@ body {
     box-sizing: inherit;
 }
 
-/* remove if I end up getting normalize.css */
-button {
-    /* removes default styling on buttons */
-    background: transparent;    
-    border: 0 transparent;
-    padding: 0;
-    margin: 0;
-}
-
-ul {
-    margin-left: 0;
-}
-
 h1 {
     font: 500 2.5rem/3.25rem 'Antonio', sans-serif;
     text-transform: uppercase;
@@ -59,20 +46,114 @@ h3 {
     letter-spacing: 0.0625rem;
 }
 
-header {
-    /* display: grid;
-    grid-template-columns: 3fr 1fr; */
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--grey-light);
+/* .header {
+} */
+
+.header_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--grey-dark);
 }
 
 .header__title {
     font:  500 1.75rem/2.25rem 'Antonio', sans-serif;
     text-transform: uppercase;
     letter-spacing: -.065625rem;
+    place-self: center start;
 } 
 
-main {
+.header__menu-icon {
+    place-self: center end;
+}
+
+.menu {
+    max-width: 87vw;
+    margin: 0 auto;    
+}
+
+.menu__list {
+    margin-left: 0;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    /* gap: 1.25rem; */
+}
+
+.menu__item {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr 1.25rem;
+    place-content: center;
+    column-gap: 1.25rem;
+    padding: 1.25rem 0; 
+    margin-left: 0; 
+    border-bottom: .0625rem solid var(--grey-dark); 
+}
+
+.menu__item:last-child {
+    border-bottom: 0;   
+}
+
+.menu__item-planet {
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    background-color: #fff;
+    place-self: center start;
+}
+
+.menu__item-link {
+    font: 700 .9375rem/1.56rem 'Spartan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.085rem;
+    text-decoration: none;
+    color: var(--white);
+    place-self: center start;
+}
+
+.menu__item-carrot {
+    place-self: center end;
+}
+
+.--mercury {
+    background-color: #DEF4FC;
+}
+
+.--venus {
+    background-color: #F7CC7F;
+}
+
+.--earth {
+    background-color: #545BFE;
+}
+
+.--mars {
+    background-color: #FF6A45;
+}
+
+.--jupiter {
+    background-color: #ECAD7A;
+}
+
+.--saturn {
+    background-color: #FCCB6B;
+}
+
+.--uranus {
+    background-color: #65F0D5;
+}
+
+.--neptune {
+    background-color: #497EFA;
+}
+
+.--hidden{
+    display: none;
+}
+
+.main-content {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -83,30 +164,7 @@ main {
     text-align: center;
 }
 
-/* .nav__list {
-    margin-left: 0;
-} */
-
-.nav__list-item {
-    display: grid;
-    margin: 1.5rem;
-
-}
-
-.nav__item-planet {
-    display: inline-block;
-    height: 1.25rem;
-    width: 1.25rem;
-    border-radius: 50%;
-    background-color: #fff;
-}
-
-.nav__item-link {
-    text-transform: uppercase;
-    color: var(--white);
-}
-
-.tabs__navlist {
+.tabs__list {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(5rem, 1fr));
     place-content: center;
@@ -116,29 +174,32 @@ main {
     border-style: solid none;
 }
 
-.tabs__nav-item {
+.tabs__list-item {
     border-bottom: .25rem solid transparent;    
 }
 
-.tabs__nav-item:hover,
-.tabs__nav-item:focus {
+.tabs__list-item:hover,
+.tabs__list-item:focus {
     border-bottom: solid var(--grey-dark);
     /* rewrite as JS later */
 }
 
-.tabs__nav-item[aria-selected="true"] {
+.tabs__list-item[aria-selected="true"] {
     border-bottom: solid var(--mercury);
     /* rewrite as JS later */
     /* Write JS to update the variable color according to planet id */
 }
 
-.tabs__nav-trigger {
+.tabs__button {
+    background: transparent;    
+    border: 0 transparent;    
+    margin: 0;
     padding: 1rem 0;
     width: 100%;
     height: auto;
 }
 
-.tabs__nav-trigger h2 {
+.tabs__heading {
     font: 700 .5625rem/.625rem 'Spartan', sans-serif;
     color: var(--white);
     text-transform: uppercase;

@@ -1,5 +1,5 @@
 // Declare global variables
-const main = document.querySelector(`main`);
+const main = document.querySelector(`.main-content`);
 const {planet} = main.dataset;  
 
 // Declare Variables for tablist, tabs, and tabpanels

@@ -12,80 +12,81 @@
   <title>Frontend Mentor | Planets fact site</title>
 </head>
 <body>
- <header>
-     <span class="header__title">The planets</span>
-     <img src="assets/icon-hamburger.svg" alt="collasped mobile menu">
-    <nav>
-      
-      <ul class="nav__list">
-        <li class="nav__list-item">
-          <span class="nav__item-planet"></span>
-          <a class="nav__item-link" href="index.html" title="">Mercury</a>
-          <img src="assets/icon-chevron.svg" alt="">
+ <header class="header">
+    <div class="header_row">
+      <span class="header__title">The planets</span>
+      <img class="header__menu-icon" src="assets/icon-hamburger.svg" alt="collasped mobile menu">
+    </div>
+    <nav class="menu">      
+      <ul class="menu__list">
+        <li class="menu__item">
+          <span class="menu__item-planet --mercury"></span>
+          <a class="menu__item-link" href="index.html" title="">Mercury</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
         </li>
-        <li class="nav__list-item">
-          <span class="nav__item-planet"></span>
-          <a class="nav__item-link" href="venus.html" title="">Venus</a>
-          <img src="assets/icon-chevron.svg" alt="">
+        <li class="menu__item">
+          <span class="menu__item-planet --venus"></span>
+          <a class="menu__item-link" href="venus.html" title="">Venus</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
         </li>
-        <li class="nav__list-item">
-          <span class="nav__item-planet"></span>
-          <a class="nav__item-link" href="earth.html" title="">Earth</a>
-          <img src="assets/icon-chevron.svg" alt="">
+        <li class="menu__item">
+          <span class="menu__item-planet --earth"></span>
+          <a class="menu__item-link" href="earth.html" title="">Earth</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
         </li>
-        <li class="nav__list-item">
-          <span class="nav__item-planet"></span>
-          <a class="nav__item-link" href="mars.html" title="">Mars</a>
-          <img src="assets/icon-chevron.svg" alt="">
+        <li class="menu__item">
+          <span class="menu__item-planet --mars"></span>
+          <a class="menu__item-link" href="mars.html" title="">Mars</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
         </li>
-        <li class="nav__list-item">
-          <span class="nav__item-planet"></span>
-          <a class="nav__item-link" href="jupiter.html" title="">Jupiter</a>
-          <img src="assets/icon-chevron.svg" alt="">
+        <li class="menu__item">
+          <span class="menu__item-planet --jupiter"></span>
+          <a class="menu__item-link" href="jupiter.html" title="">Jupiter</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
         </li>
-        <li class="nav__list-item">
-          <span class="nav__item-planet"></span>
-          <a class="nav__item-link" href="saturn.html" title="">Saturn</a>
-          <img src="assets/icon-chevron.svg" alt="">
+        <li class="menu__item">
+          <span class="menu__item-planet --saturn"></span>
+          <a class="menu__item-link" href="saturn.html" title="">Saturn</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
         </li>
-        <li class="nav__list-item">
-          <span class="nav__item-planet"></span>
-          <a class="nav__item-link" href="uranus.html" title="">Uranus</a>
-          <img src="assets/icon-chevron.svg" alt="">
+        <li class="menu__item">
+          <span class="menu__item-planet --uranus"></span>
+          <a class="menu__item-link" href="uranus.html" title="">Uranus</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
         </li>
-        <li class="nav__list-item">
-          <span class="nav__item-planet"></span>
-          <a class="nav__item-link" href="neptune.html" title="">Neptune</a>
-          <img src="assets/icon-chevron.svg" alt="">
+        <li class="menu__item">
+          <span class="menu__item-planet --neptune"></span>
+          <a class="menu__item-link" href="neptune.html" title="">Neptune</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
         </li>
       </ul>
     </nav>
  </header>
- <main id="main-content" data-planet="0">
+ <main id="main-content" class="main-content" data-planet="0">
    <!--- Image to change depending on tab panel --->
    <img src="assets/planet-mercury.svg" alt="Friendly illustration-style vector of the planet Mercury">
    
    <section class="tabs" aria-multiselectable="false">
       <h1>Mercury</h1>
       <!--- Tab buttons --->
-      <ol class="tabs__navlist" role="tablist">
-       <li class="tabs__nav-item" role="presentation">
-         <button id="overview-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="1" aria-selected="true">
-           <h2>
+      <ol class="tabs__list" role="tablist">
+       <li class="tabs__list-item" role="presentation">
+         <button id="overview-tab" class="tabs__button" role="tab" aria-setsize="3" aria-posinset="1" aria-selected="true">
+           <h2 class="tabs__heading">
              <span class="tabs__item-num">01</span> Overview
            </h2>
          </button>
         </li>
-       <li class="tabs__nav-item" role="presentation">
-         <button id="structure-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="2" aria-selected="false">
-           <h2>
+       <li class="tabs__list-item" role="presentation">
+         <button id="structure-tab" class="tabs__button" role="tab" aria-setsize="3" aria-posinset="2" aria-selected="false">
+           <h2 class="tabs__heading">
              <span class="tabs__item-num">02</span> Structure
            </h2>
           </button>
         </li>
-       <li class="tabs__nav-item" role="presentation">
-         <button id="geology-tab" class="tabs__nav-trigger" role="tab" aria-setsize="3" aria-posinset="3" aria-selected="false">
-           <h2>
+       <li class="tabs__list-item" role="presentation">
+         <button id="geology-tab" class="tabs__button" role="tab" aria-setsize="3" aria-posinset="3" aria-selected="false">
+           <h2 class="tabs__heading">
              <span class="tabs__item-num">03</span> Surface
             </h2>
           </button>
@@ -102,7 +103,7 @@
             planets in the Solar System, and is a rocky body like Earth.
           </p>
           <p>
-            <span class="tabs__source">Source : <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" title="Learn more about Mercury on Wikipedia.">Wikipedia</a> <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) --></span>
+            <span class="tabs__source">Source : <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" title="Learn more about Mercury on Wikipedia.">Wikipedia</a></span>
           </p>
           <!-- Overview Content End -->
         </div>
@@ -115,8 +116,7 @@
             Solar System at 5.427 g/cm3 , only slightly less than Earth's density.
           </p>
           <p>
-            Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure -->
-            <!-- Internal Structure Content End -->
+            <span class="tabs__source">Source : <a href="https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure" title="Learn more about Mercury's internal structure on Wikipedia.">Wikipedia</a></span>
           </p>
         </div>
         <div class="tabs__panel" id="geology-tabpanel" role="tabpanel" aria-labelledby="geology-tab" hidden>
@@ -128,7 +128,7 @@
             than either Mars's or the Moon’s.
           </p>
           <p>
-            Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology -->
+            <span class="tabs__source">Source : <a href="https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology" title="Learn more about Mercury's surface geology on Wikipedia.">Wikipedia</a></span>
           </p>
           <!-- Surface Geology Content End -->
         </div>
