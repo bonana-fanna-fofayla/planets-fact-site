@@ -15,7 +15,9 @@
  <header class="header">
     <div class="header_row">
       <span class="header__title">The planets</span>
-      <img class="header__menu-icon" src="assets/icon-hamburger.svg" alt="collasped mobile menu">
+      <button class="header__menu-icon">
+        <img src="assets/icon-hamburger.svg" alt="collasped mobile menu">
+      </button>
     </div>
     <nav class="menu">      
       <ul class="menu__list">
@@ -63,10 +65,11 @@
     </nav>
  </header>
  <main id="main-content" class="main-content" data-planet="0">
-   <!--- Image to change depending on tab panel --->
-   <img src="assets/planet-mercury.svg" alt="Friendly illustration-style vector of the planet Mercury">
-   
+   <!--- Image to change depending on tab panel --->   
    <section class="tabs" aria-multiselectable="false">
+     <div class="imageWrapper">
+         <img class="planet-image" src="assets/planet-mercury.svg" alt="Friendly illustration-style vector of the planet Mercury">
+      </div>
       <h1>Mercury</h1>
       <!--- Tab buttons --->
       <ol class="tabs__list" role="tablist">
@@ -137,7 +140,7 @@
     <section class="suppInfo">
       <div class="suppInfo__item">
         <h3 class="suppInfo__title">Rotation Time</h3>
-        <span class="suppInfo__copy">58.6 Days</span>
+        <span class="suppInfo__copy"></span>
       </div>
       <div class="suppInfo__item">
         <h3 class="suppInfo__title">Revolution Time</h3>

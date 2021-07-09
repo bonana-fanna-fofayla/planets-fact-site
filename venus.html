@@ -3,61 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap" rel="stylesheet">  
+  <link defer rel="stylesheet" type="text/css" href="style.css">  
+  <script defer src="script.js"></script>
+  <link defer rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" >
   
-  <title>Frontend Mentor | Planets fact site</title>
+  <title>Venus | Planets fact site</title>
 </head>
 <body>
-  Venus
-
-  <!-- Overview Content Start -->
-
-  Venus is the second planet from the Sun. It is named after the 
-  Roman goddess of love and beauty. As the brightest natural object 
-  in Earth's night sky after the Moon, Venus can cast shadows and 
-  can be, on rare occasions, visible to the naked eye in broad daylight.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Venus -->
-
-  <!-- Overview Content End -->
-
-  <!-- Internal Structure Content Start -->
-
-  The similarity in size and density between Venus and Earth suggests 
-  they share a similar internal structure: a core, mantle, and crust. 
-  Like that of Earth, Venusian core is most likely at least partially 
-  liquid because the two planets have been cooling at about the same rate.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Venus#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  Much of the Venusian surface appears to have been shaped by volcanic activity. 
-  Venus has several times as many volcanoes as Earth, and it has 167 large 
-  volcanoes that are over 100 km (60 mi) across. The only volcanic complex 
-  of this size on Earth is the Big Island of Hawaii.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Venus#Surface_geology -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  243 Days
-
-  Revolution Time
-  224.7 Days
-
-  Radius
-  6,051.8 KM
-
-  Average Temp.
-  471°c
+ <header class="header">
+    <div class="header_row">
+      <span class="header__title">The planets</span>
+      <button class="header__menu-icon">
+        <img src="assets/icon-hamburger.svg" alt="collasped mobile menu">
+      </button>
+    </div>
+    <nav class="menu">      
+      <ul class="menu__list">
+        <li class="menu__item">
+          <span class="menu__item-planet --mercury"></span>
+          <a class="menu__item-link" href="index.html" title="">Mercury</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="menu__item">
+          <span class="menu__item-planet --venus"></span>
+          <a class="menu__item-link" href="venus.html" title="">Venus</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="menu__item">
+          <span class="menu__item-planet --earth"></span>
+          <a class="menu__item-link" href="earth.html" title="">Earth</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="menu__item">
+          <span class="menu__item-planet --mars"></span>
+          <a class="menu__item-link" href="mars.html" title="">Mars</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="menu__item">
+          <span class="menu__item-planet --jupiter"></span>
+          <a class="menu__item-link" href="jupiter.html" title="">Jupiter</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="menu__item">
+          <span class="menu__item-planet --saturn"></span>
+          <a class="menu__item-link" href="saturn.html" title="">Saturn</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="menu__item">
+          <span class="menu__item-planet --uranus"></span>
+          <a class="menu__item-link" href="uranus.html" title="">Uranus</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+        </li>
+        <li class="menu__item">
+          <span class="menu__item-planet --neptune"></span>
+          <a class="menu__item-link" href="neptune.html" title="">Neptune</a>
+          <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+        </li>
+      </ul>
+    </nav>
+ </header>
+ <main id="main-content" class="main-content" data-planet="1">
+   <section class="tabs" aria-multiselectable="false">
+      <!--- Image to change depending on tab panel --->   
+      <div class="imageWrapper">
+        <img class="planet-image" src="assets/planet-venus.svg" alt="Friendly illustration-style vector of the planet Venus">
+     </div>
+      <h1></h1>
+      <!--- Tab buttons --->
+      <ol class="tabs__list" role="tablist">
+       <li class="tabs__list-item" role="presentation">
+         <button id="overview-tab" class="tabs__button" role="tab" aria-setsize="3" aria-posinset="1" aria-selected="true">
+           <h2 class="tabs__heading">
+             <span class="tabs__item-num">01</span> Overview
+           </h2>
+         </button>
+        </li>
+       <li class="tabs__list-item" role="presentation">
+         <button id="structure-tab" class="tabs__button" role="tab" aria-setsize="3" aria-posinset="2" aria-selected="false">
+           <h2 class="tabs__heading">
+             <span class="tabs__item-num">02</span> Structure
+           </h2>
+          </button>
+        </li>
+       <li class="tabs__list-item" role="presentation">
+         <button id="geology-tab" class="tabs__button" role="tab" aria-setsize="3" aria-posinset="3" aria-selected="false">
+           <h2 class="tabs__heading">
+             <span class="tabs__item-num">03</span> Surface
+            </h2>
+          </button>
+        </li>
+     </ol>     
+     <!-- Tab panels -->
+     <div class="tabs__panels">        
+        <div class="tabs__panel" id="overview-tabpanel" role="tabpanel" aria-labelledby="overview-tab">
+          <!--- Overview Content --->
+        </div>
+        <div class="tabs__panel" id="structure-tabpanel" role="tabpanel" aria-labelledby="structure-tab" hidden>
+         <!--- Structure Content --->
+        </div>
+        <div class="tabs__panel" id="geology-tabpanel" role="tabpanel" aria-labelledby="geology-tab" hidden>
+          <!--- Geology Content --->
+        </div>
+      </div>
+   </section>
+    <section class="suppInfo">
+      <div class="suppInfo__item">
+        <h3 class="suppInfo__title">Rotation Time</h3>
+        <span class="suppInfo__copy"></span>
+      </div>
+      <div class="suppInfo__item">
+        <h3 class="suppInfo__title">Revolution Time</h3>
+        <span class="suppInfo__copy"></span>
+      </div>
+      <div class="suppInfo__item">
+        <h3 class="suppInfo__title">Radius</h3>
+        <span class="suppInfo__copy"></span>
+      </div>
+      <div class="suppInfo__item">
+        <h3 class="suppInfo__title">Average Temp.</h3>
+        <span class="suppInfo__copy"></span>
+      </div>
+    </section>   
+  </main>
+ <footer>
+   <p>Code by Ayla</p>
+ </footer>
 </body>
 </html>
