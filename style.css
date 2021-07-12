@@ -88,17 +88,18 @@ h3 {
 }
 
 .menu__item {
-    display: grid;
-    grid-template-columns: 1.25rem 1fr 1.25rem;
-    place-content: center;
-    column-gap: 1.25rem;
-    padding: 1.25rem 0; 
-    margin-left: 0; 
     border-bottom: .0625rem solid var(--grey-dark); 
+    list-style: none;    
 }
 
 .menu__item:last-child {
     border-bottom: 0;   
+}
+
+.menu__item:hover,
+.menu__item:focus {
+    background: hsla(240, 6%, 54%, .2);
+    border-radius: 10px;   
 }
 
 .menu__item-planet {
@@ -111,10 +112,19 @@ h3 {
 }
 
 .menu__item-link {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr 1.25rem;
+    place-content: center;
+    column-gap: 1.25rem;
+    padding: 1.25rem 0; 
+    margin-left: 0; 
+    text-decoration: none;
+}
+
+.menu__item-text {
     font: 700 .9375rem/1.56rem 'Spartan', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.085rem;
-    text-decoration: none;
     color: var(--white);
     place-self: center start;
 }
