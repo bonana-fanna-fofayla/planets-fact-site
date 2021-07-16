@@ -3,61 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap" rel="stylesheet">  
+  <link defer rel="stylesheet" type="text/css" href="style.css">  
+  <script defer src="script.js"></script>
+  <link defer rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" >
   
-  <title>Frontend Mentor | Planets fact site</title>
+  <title>Earth | Planets fact site</title>
 </head>
 <body>
-  Earth
-
-  <!-- Overview Content Start -->
-
-  Third planet from the Sun and the only known planet to harbor life. 
-  About 29.2% of Earth's surface is land with remaining 70.8% is 
-  covered with water. Earth's distance from the Sun, physical properties 
-  and geological history have allowed life to evolve and thrive.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth -->
-
-  <!-- Overview Content End -->
-
-  <!-- Internal Structure Content Start -->
-
-  Earth's interior, like that of the other terrestrial planets, is divided 
-  into layers by their chemical or physical (rheological) properties. The 
-  outer layer is a chemically distinct silicate solid crust, which is 
-  underlain by a highly viscous solid mantle.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  The total surface area of Earth is about 510 million km2. The continental 
-  crust consists of lower density material such as the igneous rocks granite 
-  and andesite. Less common is basalt, a denser volcanic rock that is the 
-  primary constituent of the ocean floors.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth#Surface -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  0.99 Days
-
-  Revolution Time
-  365.26 Days
-
-  Radius
-  6,371 KM
-
-  Average Temp.
-  16°c
+  <header class="header">
+    <div class="header_row">
+      <span class="header__title">The planets</span>
+      <button class="header__menu-icon" aria-label="Menu toggle" aria-controls="header-menu" aria-expanded="false">
+        <img src="assets/icon-hamburger.svg" alt="">
+      </button>
+    </div>
+    <nav id="header-menu" class="menu --hide">      
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__item-link" href="index.html" title="">
+            <span class="menu__item-planet --mercury"></span>
+            <span class="menu__item-text">Mercury</span>
+            <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link" href="venus.html" title="">
+            <span class="menu__item-planet --venus"></span>
+            <span class="menu__item-text">Venus</span>            
+            <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link" href="earth.html" title="">
+            <span class="menu__item-planet --earth"></span>
+            <span class="menu__item-text">Earth</span>
+            <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link" href="mars.html" title="">
+            <span class="menu__item-planet --mars"></span>
+            <span class="menu__item-text">Mars</span>
+            <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link" href="jupiter.html" title="">
+            <span class="menu__item-planet --jupiter"></span>
+            <span class="menu__item-text">Jupiter</span>
+            <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link" href="saturn.html" title="">
+            <span class="menu__item-planet --saturn"></span>
+            <span class="menu__item-text">Saturn</span>
+            <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link" href="uranus.html" title="">
+            <span class="menu__item-planet --uranus"></span>
+            <span class="menu__item-text">Uranus</span>
+            <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link" href="neptune.html" title="">
+            <span class="menu__item-planet --neptune"></span>
+            <span class="menu__item-text">Neptune</span>
+            <img class="menu__item-carrot" src="assets/icon-chevron.svg" alt="">
+          </a>
+        </li>
+      </ul>
+    </nav>
+ </header>
+ <main id="main-content" class="main-content" data-planet="2">
+   <section class="tabs" aria-multiselectable="false">
+      <!--- Image to change depending on tab panel --->   
+      <div class="imageWrapper">
+        <img class="planet-image">
+     </div>
+      <h1></h1>
+      <!--- Tab buttons --->
+      <ol class="tabs__list" role="tablist">
+       <li class="tabs__list-item" role="presentation">
+         <button id="overview-tab" class="tabs__button" role="tab" aria-setsize="3" aria-posinset="1" aria-selected="true">
+           <h2 class="tabs__heading">
+             <span class="tabs__item-num">01</span> Overview
+           </h2>
+         </button>
+        </li>
+       <li class="tabs__list-item" role="presentation">
+         <button id="structure-tab" class="tabs__button" role="tab" aria-setsize="3" aria-posinset="2" aria-selected="false">
+           <h2 class="tabs__heading">
+             <span class="tabs__item-num">02</span> Structure
+           </h2>
+          </button>
+        </li>
+       <li class="tabs__list-item" role="presentation">
+         <button id="geology-tab" class="tabs__button" role="tab" aria-setsize="3" aria-posinset="3" aria-selected="false">
+           <h2 class="tabs__heading">
+             <span class="tabs__item-num">03</span> Surface
+            </h2>
+          </button>
+        </li>
+     </ol>     
+     <!-- Tab panels -->
+     <div class="tabs__panels">        
+        <div class="tabs__panel" id="overview-tabpanel" role="tabpanel" aria-labelledby="overview-tab">
+          <!--- Overview Content --->
+        </div>
+        <div class="tabs__panel" id="structure-tabpanel" role="tabpanel" aria-labelledby="structure-tab" hidden>
+         <!--- Structure Content --->
+        </div>
+        <div class="tabs__panel" id="geology-tabpanel" role="tabpanel" aria-labelledby="geology-tab" hidden>
+          <!--- Geology Content --->
+        </div>
+      </div>
+   </section>
+    <section class="suppInfo">
+      <div class="suppInfo__item">
+        <h3 class="suppInfo__title">Rotation Time</h3>
+        <span class="suppInfo__copy"></span>
+      </div>
+      <div class="suppInfo__item">
+        <h3 class="suppInfo__title">Revolution Time</h3>
+        <span class="suppInfo__copy"></span>
+      </div>
+      <div class="suppInfo__item">
+        <h3 class="suppInfo__title">Radius</h3>
+        <span class="suppInfo__copy"></span>
+      </div>
+      <div class="suppInfo__item">
+        <h3 class="suppInfo__title">Average Temp.</h3>
+        <span class="suppInfo__copy"></span>
+      </div>
+    </section>   
+  </main>
+ <footer>
+   <p>Code by Ayla</p>
+ </footer>
 </body>
 </html>

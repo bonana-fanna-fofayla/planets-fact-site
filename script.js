@@ -12,11 +12,11 @@ const tabs = tablist.querySelectorAll(`[role='tab']`);
 const tabpanels = Array.from(tablist.querySelectorAll(`[role='tabpanel']`));
 
 // console.log(tabImg);
-
 // Handle mobile menu toggle
 function handleMenuToggle () {
-    menu_toggle.classList.toggle(`--transition-opacity`);   
-    menu.classList.toggle(`--hide`);   
+    this.classList.toggle(`--transition-opacity`);
+    this.getAttribute(`aria-expanded`) === `false` ? this.setAttribute(`aria-expanded`, `true`):this.setAttribute(`aria-expanded`, `false`);   
+    menu.classList.toggle(`--hide`); 
 }
 
 menu_toggle.addEventListener(`click`, handleMenuToggle);
@@ -62,6 +62,8 @@ function getPlanetInfo(currentPlanet) {
     const planetRevolution = `${currentPlanet.revolution}`;
     const planetRadius = `${currentPlanet.radius}`;
     const planetTemp = `${currentPlanet.temperature}`;    
+    tabImg.alt = `Friendly illustration-style vector of the planet ${planetName}.`;
+    tabImg.src = `assets/planet-${planetName.toLowerCase()}.svg`;    
     tabpanels[0].innerHTML = `
         <p>${planetOverview_Content}</p>
         <p>
